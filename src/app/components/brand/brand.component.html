@@ -1,0 +1,16 @@
+
+<table class="table table-striped table-hover">
+  <thead>
+      <tr>
+          <td>Marka</td>
+          <td>Şirket</td>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let brand of brands">
+          <td>{{brand.id}}</td>
+          <td>{{brand.name}}</td>
+
+      </tr>
+  </tbody>
+</table>

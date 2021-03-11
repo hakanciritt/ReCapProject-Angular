@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -124,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "ReCapProject"
+  "defaultProject": "ReCapProject",
+  "cli": {
+    "analytics": "66e1c23d-ad71-4ac8-a675-cd1a3af3ce56"
+  }
 }
