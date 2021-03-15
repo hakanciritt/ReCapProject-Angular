@@ -1,16 +1,7 @@
-
-<table class="table table-striped table-hover">
-  <thead>
-      <tr>
-          <td>Marka</td>
-          <td>Şirket</td>
-      </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor="let brand of brands">
-          <td>{{brand.id}}</td>
-          <td>{{brand.name}}</td>
-
-      </tr>
-  </tbody>
-</table>
+<h5>Marka</h5>
+<ul class="list-group">
+    <li routerLink="/cars" class="list-group-item">Tümü</li>
+    <li routerLink="/cars/brand/{{brand.id}}" (click)="setCurrentBrand(brand)" *ngFor="let brand of brands"
+        [class]="getCurrentBrandClass(brand)">
+        {{brand.name}}</li>
+</ul>
