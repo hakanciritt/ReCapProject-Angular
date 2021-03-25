@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
 import { Rental } from '../models/rental';
+import { environment } from 'src/environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class RentalService {
 
-  apiUrl = "https://localhost:44312/api/rentals/getall";
+  apiUrl = environment.apiUrl + "rentals/getall";
 
   constructor(private httpClient: HttpClient) { }
 

@@ -1,18 +1,25 @@
-<table class="table table-striped table-hover">
-    <thead>
-        <tr>
-            <th>Araba</th>
-            <th>Marka</th>
-            <th>Renk</th>
-            <th>Fiyat</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let car of cars">
-            <td>{{car.carName}}</td>
-            <td>{{car.brandName}}</td>
-            <td>{{car.colorName}}</td>
-            <td>{{car.dailyPrice}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="mb-3">
+    <label for="filterText" class="form-label">Araba Ara</label>
+    <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText"
+     placeholder="Araba Arayınız" autocomplete="off">
+  </div>
+
+  <div *ngIf="filterText" class="alert alert-success">
+  {{filterText}} Aradınız
+  </div> 
+
+<div class="image-list">
+    <div *ngFor="let car of cars | filterPipe:filterText" class="card m-3" style="width: 18rem;">
+        <img class="card-img-top" src="{{baseUrl}}Images/{{car.imagePath}}" alt="Card image cap">
+        <div class="card-body">
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Marka : {{car.brandName}}</li>
+            <li class="list-group-item">Renk : {{car.colorName}}</li>
+            <li class="list-group-item">Günlük Fiyat : {{car.dailyPrice}}</li>
+            <li class="list-group-item">Model Yılı : {{car.modelYear}}</li>
+            <li class="list-group-item">Açıklama : {{car.description}}</li>
+        </ul>
+        <div><button routerLink="/cars/cardetail/{{car.id}}" class="btn btn-primary m-2">Detay</button></div>
+    </div>
+</div>

@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Customer } from '../models/customer';
 import { ListResponseModel } from '../models/listResponseModel';
+import { environment } from 'src/environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
 
-  apiUrl = "https://localhost:44312/api/customers/getall";
+  apiUrl = environment.apiUrl + "customers/getall";
 
   constructor(private httpClient: HttpClient) { }
 
