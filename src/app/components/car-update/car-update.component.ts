@@ -61,14 +61,14 @@ export class CarUpdateComponent implements OnInit {
         dailyPrice: this.carUpdateForm.value.dailyPrice,
         modelYear: this.carUpdateForm.value.modelYear,
         description: this.carUpdateForm.value.description
-      }
+      } 
       this.carService.update(car).subscribe(response => {
         this.toastrService.success(response.message, "Başarılı");
         this.router.navigate(['/car-list']);
       }, responseError => {
         console.log(responseError);
         this.toastrService.error(responseError.message, "Hata")
-      })
+      }) 
     } else {
       this.toastrService.error("Form eksik", "Hata")
     }

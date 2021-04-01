@@ -44,7 +44,7 @@ export class BrandUpdateComponent implements OnInit {
       })
     } else {
       this.toastrService.error("Form eksik", "Hata")
-    }
+    } 
     this.router.navigate(['/car-list']);
   }
 

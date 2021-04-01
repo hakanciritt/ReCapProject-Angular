@@ -49,7 +49,7 @@ export class CarAddComponent implements OnInit {
         dailyPrice: this.carForm.value.dailyPrice,
         modelYear: this.carForm.value.modelYear,
         description: this.carForm.value.description
-      };
+      }; 
 
       this.carService.add(car).subscribe(response => {
         console.log(response);

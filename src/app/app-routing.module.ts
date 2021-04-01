@@ -16,9 +16,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 
 const routes: Routes = [
   { path: "", component: CarComponent, pathMatch: "full" },
-  { path: "cars/brand/:brandName", component: CarComponent },
   { path: "cars", component: CarComponent },
-  { path: "cars/color/:colorName", component: CarComponent },
   { path: "cars/cardetail/:carId", component: CarDetailComponent },
   { path: "cars/filter/:colorId/:brandId", component: CarComponent },
   { path: "car-rent/:id", component: CarRentComponent },
@@ -30,7 +28,7 @@ const routes: Routes = [
   { path: "brand/delete/:id", component: BrandComponent },
   { path: "brand/update/:id", component: BrandUpdateComponent },
   { path: "color-add", component: ColorAddComponent },
-  { path: "color/delete/:id", component: ColorComponent },
+  { path: "color/delete/:id", component: ColorComponent }, 
   { path: "color/update/:id", component: ColorUpdateComponent },
   { path: "car-list/update/:id", component: CarUpdateComponent },
   { path: "car-list/delete/:id", component: CarListComponent },
