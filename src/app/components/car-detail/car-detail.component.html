@@ -1,9 +1,14 @@
-<td>{{carDetail.id}}</td>
-<td>{{carDetail.carName}}</td>
-<td>{{carDetail.brandName}}</td>
-<td>{{carDetail.modelYear}}</td>
-<td>{{carDetail.colorName}}</td>
-<td>{{carDetail.dailyPrice}}</td>
-<td>{{carDetail.description}}</td>
-<img width="250" src="{{baseUrl}}Images/{{carDetail.imagePath}}">
-<td>{{carDetail.imagePath}}</td>
+<div class="card mb-3">
+    <img src="{{baseUrl}}/{{carDetail.imagePath}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{carDetail.carName}}</h5>
+        <p class="card-text">Renk : {{carDetail.colorName}}</p>
+        <p class="card-text">Marka : {{carDetail.brandName}}</p>
+        <p class="card-text">Model yılı : {{carDetail.modelYear | date:'yyyy'}}</p>
+        <p class="card-text">Günlük fiyat : {{carDetail.dailyPrice | currency:'₺'}}</p>
+        <p class="card-text">Açıklama : {{carDetail.description}}</p>
+        <div>
+            <button routerLink="/car-rent/{{carDetail.id}}" class="btn btn-primary">Kirala</button>
+        </div>
+    </div>
+</div>

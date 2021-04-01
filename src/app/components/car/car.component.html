@@ -16,8 +16,8 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Marka : {{car.brandName}}</li>
             <li class="list-group-item">Renk : {{car.colorName}}</li>
-            <li class="list-group-item">Günlük Fiyat : {{car.dailyPrice}}</li>
-            <li class="list-group-item">Model Yılı : {{car.modelYear}}</li>
+            <li class="list-group-item">Günlük Fiyat : {{car.dailyPrice | currency:"₺"  }}</li>
+            <li class="list-group-item">Model Yılı : {{car.modelYear | date:'yyyy'}}</li>
             <li class="list-group-item">Açıklama : {{car.description}}</li>
         </ul>
         <div><button routerLink="/cars/cardetail/{{car.id}}" class="btn btn-primary m-2">Detay</button></div>

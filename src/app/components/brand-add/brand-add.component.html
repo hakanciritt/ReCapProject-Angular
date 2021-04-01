@@ -1,0 +1,15 @@
+
+<div class="card mt-2">
+    <div class="card-header">
+        Marka Ekle
+    </div>
+    <div class="card-body">
+        <form  [formGroup]="brandForm">
+            <div class="mb-3">
+                <label for="brandName" class="form-label">Marka</label>
+                <input type="text" formControlName="name" class="form-control" id="brandName" />
+            </div>
+            <button (click)="addBrand()" class="btn btn-success">Ekle</button>
+        </form>
+    </div>
+</div>

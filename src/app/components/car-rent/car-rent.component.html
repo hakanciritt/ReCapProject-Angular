@@ -1,0 +1,47 @@
+<div class="content" style="padding-top: 1%;">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title"> Araba Kirala</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="rentalCarForm">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <input type="number" hidden readonly id="carId" formControlName="carId" [(ngModel)]="car.id"
+                                class="form-control" required />
+                        </div>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <div class="form-group">
+                            <select class="form-select" formControlName="customerId">
+                                <option [value]="customer.id" *ngFor="let customer of customers">
+                                    {{ customer.fullName }} | {{ customer.companyName }}
+                                </option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <div class="mb-3">
+                        <label for="rentDate">Alış Tarihi Seçiniz</label>
+                        <div class="form-group">
+                            <input type="datetime-local" id="rentDate" formControlName="rentDate" class="form-control"
+                                required />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="returnDate">İade Tarihi Seçiniz</label>
+                        <div class="form-group">
+                            <input type="datetime-local" id="returnDate" formControlName="returnDate"
+                                class="form-control" required />
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-fill btn-primary" (click)="addRentals()">Kirala </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

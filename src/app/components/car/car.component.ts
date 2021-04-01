@@ -41,17 +41,4 @@ export class CarComponent implements OnInit {
       this.dataLoaded = true;
     })
   }
-
-  // getCarsBrandName(brandName: string) {
-  //   this.carService.getCarsByName(brandName).subscribe(response => {
-  //     this.cars = response.data;
-  //     this.dataLoaded = true;
-  //   })
-  // }
-  // getCarsByColorName(colorName: string) {
-  //   this.carService.getCarsByColorName(colorName).subscribe(response => {
-  //     this.cars = response.data;
-  //     this.dataLoaded = true;
-  //   })
-  // }
 }

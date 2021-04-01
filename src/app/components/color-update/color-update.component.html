@@ -1,0 +1,17 @@
+<div class="card mt-2">
+    <div class="card-header">
+        Renk Güncelle
+    </div>
+    <div class="card-body">
+        <form [formGroup]="colorUpdateForm">
+
+            <input type="number" hidden readonly formControlName="id" class="form-control" id="colorId" required />
+
+            <div class="mb-3">
+                <label for="brandName" class="form-label">Marka</label>
+                <input formControlName="name" type="text" class="form-control" id="colorName" required />
+            </div>
+            <button (click)="colorUpdate()" class="btn btn-success">Güncelle</button>
+        </form>
+    </div>
+</div>

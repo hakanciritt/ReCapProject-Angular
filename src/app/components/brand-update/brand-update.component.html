@@ -1,0 +1,15 @@
+<div class="card mt-2">
+    <div class="card-header">
+        Marka Güncelle
+    </div>
+    <div class="card-body">
+        <form [formGroup]="brandUpdateForm">
+            <input type="number" hidden formControlName="id" class="form-control" id="brandId" required />
+            <div class="mb-3">
+                <label for="brandName" class="form-label">Marka</label>
+                <input formControlName="name" type="text" class="form-control" id="brandName" required />
+            </div>
+            <button (click)="brandUpdate()" class="btn btn-success">Güncelle</button>
+        </form>
+    </div>
+</div>

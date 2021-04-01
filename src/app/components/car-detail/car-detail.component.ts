@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/models/car';
 import { environment } from 'src/environments/environment'
 import { CarDetailService } from 'src/app/services/car-detail.service';
-
 @Component({
   selector: 'app-car-detail',
   templateUrl: './car-detail.component.html',
@@ -14,7 +13,7 @@ export class CarDetailComponent implements OnInit {
   constructor(private carDetailService: CarDetailService, private activatedRoute: ActivatedRoute) { }
   dataLoaded = false;
   carDetail: Car;
-  baseUrl = environment.baseUrl;
+  baseUrl = environment.baseUrl + "images";
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {

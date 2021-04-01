@@ -1,0 +1,50 @@
+
+<div class="card mt-2">
+    <div class="card-header">
+        Araba Ekle
+    </div>
+    <div class="card-body">
+        <form  [formGroup]="carForm">
+            <div class="mb-3">
+                <label for="carName" class="form-label">Araba Adı</label>
+                <input  type="text" formControlName="carName" class="form-control" id="carName" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Marka</label>
+                <select  formControlName="brandId" class="form-select w-100" required>
+                    <option [ngValue]="undefined" disabled selected>
+                        -- Marka seçiniz--
+                      </option>
+                    <option *ngFor="let brand of brands" [value]="brand.id" >
+                        {{brand.name}}
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Renk</label>
+                <select formControlName="colorId" class="form-select w-100" required>
+                    <option [ngValue]="undefined" disabled selected>
+                        -- Renk seçiniz--
+                      </option>
+                    <option *ngFor="let color of colors" [value]="color.id" >
+                        {{color.name}}
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="dailyPrice" class="form-label">Günlük Fiyat</label>
+                <input formControlName="dailyPrice" type="number" required class="form-control" id="dailyPrice" />
+            </div>
+            <div class="mb-3">
+                <label for="modelYear" class="form-label">Model Yılı</label>
+                <input formControlName="modelYear" type="date" required class="form-control" id="modelYear" />
+            </div>
+             <div class="mb-3">
+                <label for="name" class="form-label">Açıklama</label>
+                <textarea formControlName="description" class="form-control" rows="5" cols="15" >
+                </textarea>
+            </div> 
+            <button (click)="carAdd()" class="btn btn-success">Ekle</button>
+        </form>
+    </div>
+</div>

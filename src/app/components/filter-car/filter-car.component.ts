@@ -20,7 +20,7 @@ export class FilterCarComponent implements OnInit {
   colorFilterText: string;
 
   constructor(private colorService: ColorService,
-     private brandService: BrandService) { }
+    private brandService: BrandService) { }
 
   ngOnInit(): void {
     this.colorAndBrandGetAll();
@@ -35,7 +35,6 @@ export class FilterCarComponent implements OnInit {
   }
 
   getSelectedBrand(brandId: Number) {
-    console.log(brandId);
     if (this.brandId == brandId) {
       return true;
     }
@@ -46,7 +45,6 @@ export class FilterCarComponent implements OnInit {
 
   getSelectedColor(colorId: Number) {
     if (this.colorId == colorId) {
-      console.log(colorId);
       return true;
     }
     else {

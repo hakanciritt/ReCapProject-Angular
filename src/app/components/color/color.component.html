@@ -1,5 +1,19 @@
-<h5>Renk</h5>
-<ul class="list-group">
-    <li routerLink="/cars/color/{{color.name}}" (click)="setCurrentColor(color)" *ngFor="let color of colors"
-        [class]="getCurrentColorClass(color)">{{color.name}}</li>
-</ul>
+<button routerLink="/color-add" class="btn btn-success mt-2">Renk Ekle</button>
+<table class="table table-striped table-hover">
+    <thead>
+       <tr>
+           <th>Id</th>
+           <th>Renk</th>
+           <th>Güncelle</th>
+           <th>Sil</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let color of colors">
+            <td>{{color.id}}</td>
+            <td>{{color.name}}</td>
+            <td><button routerLink="/color/update/{{color.id}}" class="btn btn-warning">Güncelle</button></td>
+            <td><button routerLink="/color/delete/{{color.id}}" class="btn btn-danger">Sil</button></td>
+        </tr>
+    </tbody>
+</table>

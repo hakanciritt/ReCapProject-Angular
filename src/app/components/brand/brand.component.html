@@ -1,7 +1,19 @@
-<h5>Marka</h5>
-<ul class="list-group">
-    <li routerLink="/cars" class="list-group-item">Tümü</li>
-    <li routerLink="/cars/brand/{{brand.name}}" (click)="setCurrentBrand(brand)" *ngFor="let brand of brands"
-        [class]="getCurrentBrandClass(brand)">
-        {{brand.name}}</li>
-</ul>
+<button routerLink="/brand-add" class="btn btn-success mt-2">Marka Ekle</button>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Marka</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let brand of brands">
+            <td>{{brand.id}}</td>
+            <td>{{brand.name}}</td>
+            <td><button class="btn btn-warning" routerLink="/brand/update/{{brand.id}}">Güncelle</button></td>
+            <td><button class="btn btn-danger" routerLink="/brand/delete/{{brand.id}}">Sil</button></td>
+        </tr>
+    </tbody>
+</table>
