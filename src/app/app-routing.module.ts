@@ -12,7 +12,9 @@ import { CarComponent } from './components/car/car.component';
 import { ColorAddComponent } from './components/color-add/color-add.component';
 import { ColorUpdateComponent } from './components/color-update/color-update.component';
 import { ColorComponent } from './components/color/color.component';
+import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: "", component: CarComponent, pathMatch: "full" },
@@ -28,11 +30,13 @@ const routes: Routes = [
   { path: "brand/delete/:id", component: BrandComponent },
   { path: "brand/update/:id", component: BrandUpdateComponent },
   { path: "color-add", component: ColorAddComponent },
-  { path: "color/delete/:id", component: ColorComponent }, 
+  { path: "color/delete/:id", component: ColorComponent },
   { path: "color/update/:id", component: ColorUpdateComponent },
   { path: "car-list/update/:id", component: CarUpdateComponent },
   { path: "car-list/delete/:id", component: CarListComponent },
-  { path: "car-add", component: CarAddComponent }
+  { path: "car-add", component: CarAddComponent },
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent }
 
 ];
 

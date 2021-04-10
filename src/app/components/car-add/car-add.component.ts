@@ -54,11 +54,7 @@ export class CarAddComponent implements OnInit {
       this.carService.add(car).subscribe(response => {
         console.log(response);
       }, responseError => {
-        if (responseError.error.Errors.length > 0) {
-          for (let i = 0; i < responseError.error.Errors.length; i++) {
-            this.toastrService.error(responseError.error.Errors[i].ErrorMessage, "Doğrulama Hatası");
-          }
-        }
+        this.toastrService.error(responseError.error.Message,"Hata");
       })
     } else {
       this.toastrService.error("Formunuz eksik", "Hata");
